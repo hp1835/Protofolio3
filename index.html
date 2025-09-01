@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vCard - Personal Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/mypic.jpeg" alt="Hetvi Patel" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Hetvi Patel">Hetvi Patel</h1>
+
+          <p class="title">Software Developer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:richard@example.com" class="contact-link">hetvippatel123@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+12133522795" class="contact-link">+46 700284392</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1982-06-23">November 17, 2000</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Stockholm, Sweden, Europe</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+        
+
+          <li class="social-item">
+            <a href="https://hetvi-patel-tikrieu.gamma.site/" class="social-link">
+              <ion-icon name="globe-outline"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/hetvi-patel-569a88320/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Projects</button>
+          </li>
+
+         
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I’m a Computer Science graduate and passionate Software developer, with a strong focus on building efficient, scalable, and user-friendly applications. I enjoy working at the intersection of data and design—transforming complex ideas into intuitive, interactive, and visually appealing solutions.
+          </p>
+
+          <p>
+            My expertise spans front-end development, user interface design, and data visualization, with hands-on experience in JavaScript, Python, Php and SQL. Whether it’s designing smooth user journeys or creating scalable applications, I aim to deliver products that are not only functional but also engaging.
+
+           I love tackling challenges, learning new technologies, and collaborating with teams to craft digital products that make a difference.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">UI/UX design</h4>
+
+                <p class="service-item-text">
+                  Crafting modern, intuitive, and user-centered designs that deliver seamless experiences at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+
+                <p class="service-item-text">
+                  High-quality development of sites at the professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/laptop-code-solid-full (3).svg" alt="Software Developer icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Software Developnment</h4>
+
+                <p class="service-item-text">
+                  Building reliable and scalable software solutions tailored to your needs, from concept to deployment.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/database-solid-full (1).svg" alt="Data icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Data Science</h4>
+
+                <p class="service-item-text">
+                  Transforming raw data into clear insights and interactive visualizations through advanced analysis and modeling.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Baithoon Saif (Manager)</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Hetvi was hired at Scania AB as thesis worker to create a data visualization and prediction models. 
+                    The project supported engineers in identifying relevant patterns within large datasets.
+                    She showed strong analytical skills, technical expertise, and dedication to delivering solutions that added real value.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-4.png" alt="Jessica miller" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Älfvåg Hector (Supervisior)</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                  Hetvi joined Scania as a thesis worker for 6 months and quickly proved to be a valuable member of the team.
+                  What stood out most about Hetvi was not only her strong technical ability but also her confidence in presenting her work.
+                  She has excellent presentation skills, communicates her ideas clearly, and is never afraid to speak in public. 
+                  At the same time, she shows humility by asking questions and seeking help when needed, which made collaboration easy and effective.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Baithoon Saif (Manager)</h4>
+
+              <time datetime="2021-06-14">10 July, 2025</time>
+
+              <div data-modal-text>
+                <p>
+                  Hetvi was hired at Scania AB as thesis worker to create a data visualization and prediction models. 
+                  The project supported engineers in identifying relevant patterns within large datasets.
+                  She showed strong analytical skills, technical expertise, and dedication to delivering solutions that added real value.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Hobby/Skills</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/book-open-reader-solid-full (1).svg" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/paintbrush-solid-full (1).svg" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/plane-solid-full (1).svg" alt="client logo">
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Uppsala University (Master's In Computer Science, Uppsala)</h4>
+
+              <span>2023 — 2025</span>
+
+              <p class="timeline-text">
+                I completed my Master’s in Computer Science, gaining a strong foundation in both theory and practical applications.
+                I attended courses in Database Design, Data Mining, User Interface Design, Global Software Development, and Advanced Programming.
+                My studies also covered the Internet of Things, IT Ethics, and organizational aspects of software projects.
+                This program strengthened my technical skills and prepared me to tackle complex problems in software development and data-driven applications.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Gujarat University (Bachelr's in Computer Engineering, India)</h4>
+
+              <span>2018 — 2022</span>
+
+              <p class="timeline-text">
+                I earned my Bachelor’s degree in Computer Engineering, building a solid foundation in both hardware and software systems.
+                During my studies, I focused on programming, computer architecture, networking, and embedded systems.
+                I gained hands-on experience designing and implementing software solutions, as well as understanding the inner workings of computer hardware.
+                This degree equipped me with the technical expertise and problem-solving skills needed to develop efficient and reliable computing systems.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">S.K High School (India, Gujarat)</h4>
+
+              <span>2010 — 2018</span>
+
+              <p class="timeline-text">
+                I completed my schooling from Standard 1 to 12, with a strong focus on Science and Mathematics in the 11th and 12th grades.
+                My higher secondary education in Science and Maths helped me build the skills necessary for pursuing Computer Engineering and further studies in technology.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Thesis Worker (Scania AB, Södertälje)</h4>
+
+              <span>20th January 2025 — 10th July 2025</span>
+
+              <p class="timeline-text">
+                Completed a 6-month master’s thesis at Scania's R&D department, focused 
+                on developing a data visualization and predictive analytics tool using 
+                machine learning. The goal of the project was to gain insights from large 
+                historical datasets related to automotive systems, specifically within the 
+                urea dosing unit group.  
+  
+              </p>
+              <p>
+                Designed and built an interactive user interface using Python, Plotly, Dash, 
+                HTML, and CSS to display performance metrics and predictive results. The 
+                tool helped engineers make better decisions based on data-driven insights.  
+                Worked closely with cross-functional teams to ensure the solution met real
+                world engineering needs, with a focus on usability, performance, and scalability.  
+                This experience strengthened my skills in applied machine learning, 
+                software development, and UI/UX design in an industrial setting.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Intern (Creart Solution Pvt. Ltd, Ahmedabad)</h4>
+
+              <span>1st February 2021 — 30th June 2021 </span>
+
+              <p class="timeline-text">
+                Completed a 5-month internship during my bachelor's studies, focused on backend development using PHP and the Laravel framework. 
+                Gained practical experience in developing and maintaining web applications in a collaborative team setting.  
+                As my main project, I built a message notification system that allowed users to send OTPs (One-Time Passwords) to mobile numbers through the 
+                application by integrating SMS gateway APIs for real-time delivery. 
+              <p>This feature improved user verification processes and enhanced overall application security.  
+                During this internship, I strengthened my knowledge of MVC architecture, RESTful APIs, and server-side development. 
+                I also improved my problem solving and debugging skills, which are essential for building scalable web applications.
+              </p>
+
+            </li>
+
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Web Developnment</h5>
+                <data value="80">85%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Data Analyst</h5>
+                <data value="70">95%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">UI/UX Designer</h5>
+                <data value="90">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Andriod Developer</h5>
+                <data value="50">60%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="projects">
+
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Figma Design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Data Mining</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Software Development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Figma Design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Data Mining</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Software Development</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="Software Development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Project 6.jpg" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Flying Dutchman Resturent Website</h3>
+
+                <p class="project-category">Website developnment of Flying dutchman to take orders and payments</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Software Development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-7.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Data Visualization App Dashbord</h3>
+
+                <p class="project-category">Dash board to visualize data and draw 2d,3d graphs</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Figma Design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Project 9.PNG" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Chamberly App</h3>
+
+                <p class="project-category">Figma Design of Mobile App</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Data Mining">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Project 3.avif" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">News verify</h3>
+
+                <p class="project-category">Prediction Model to predict article or news is Facke or Real</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Figma Design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Project 4.PNG" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Outbreak Alert Web Design</h3>
+
+                <p class="project-category">Website UI for Outbreak Alert for Ethiopia Region</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Figma Design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Project 1.PNG" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Workbuddy Mobile App UI</h3>
+
+                <p class="project-category">Figma Design of the app Workbuddy, Scania Hackthon</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Software Development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.jpg" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Outbreak Alert Andriod App</h3>
+
+                <p class="project-category">Solution for Ethiopia region medical staff and people</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Data Mining">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Project 5.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Scania Parts RUL Prediction Model</h3>
+
+                <p class="project-category">Thesis Project to predict parts useful life</p>
+
+              </a>
+            </li>
+
+           <li class="project-item  active" data-filter-item data-category="Figma Design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Project 2.PNG" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Thesis Project UI</h3>
+
+                <p class="project-category">Website or Dashbord to visualize data and generate graphs</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+
+
+
+      
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2037.7012921442918!2d18.033816777013527!3d59.28784407459424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f779e991d55db%3A0x2ca9f20eb75f65e0!2zSGFycGxpbmdlZ3LDpG5kLCAxMjUgNzMgw4RsdnNqw7Y!5e0!3m2!1sen!2sse!4v1756719880584!5m2!1sen!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+       <section class="contact-form">
+  <h3 class="h3 form-title">Contact Form</h3>
+
+  <form action="https://formspree.io/f/mpwjlrnp" method="POST" class="form" data-form>
+
+    <div class="input-wrapper">
+      <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+      <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+    </div>
+
+    <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+    <button class="form-btn" type="submit" data-form-btn>
+      <ion-icon name="paper-plane"></ion-icon>
+      <span>Send Message</span>
+    </button>
+
+  </form>
+</section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
