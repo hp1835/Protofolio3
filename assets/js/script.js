@@ -1,208 +1,208 @@
 'use strict';
 
+/* =========================
+   HELPER FUNCTION
+========================= */
+const elementToggleFunc = (elem) => {
+  elem.classList.toggle("active");
+};
 
-
-// element toggle function
-const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
-
-
-
-// sidebar variables
+/* =========================
+   SIDEBAR TOGGLE
+========================= */
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
-// sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
+sidebarBtn.addEventListener("click", () => {
+  elementToggleFunc(sidebar);
+});
 
-
-
-// testimonials variables
+/* =========================
+   TESTIMONIAL MODAL
+========================= */
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
 const testimonialsModalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const testimonialsOverlay = document.querySelector("[data-overlay]");
 
-// modal variable
 const testimonialsModalImg = document.querySelector("[data-modal-img]");
 const testimonialsModalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
 
-// modal toggle function
-const testimonialsModalFunc = function () {
+const toggleTestimonialsModal = () => {
   testimonialsModalContainer.classList.toggle("active");
   testimonialsOverlay.classList.toggle("active");
-}
+};
 
-// add click event to all modal items
-for (let i = 0; i < testimonialsItem.length; i++) {
-
-  testimonialsItem[i].addEventListener("click", function () {
-
+testimonialsItem.forEach(item => {
+  item.addEventListener("click", function () {
     testimonialsModalImg.src = this.querySelector("[data-testimonials-avatar]").src;
     testimonialsModalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
     testimonialsModalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
     modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
 
-    testimonialsModalFunc();
-
+    toggleTestimonialsModal();
   });
+});
 
-}
+modalCloseBtn.addEventListener("click", toggleTestimonialsModal);
+testimonialsOverlay.addEventListener("click", toggleTestimonialsModal);
 
-// add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-testimonialsOverlay.addEventListener("click", testimonialsModalFunc);
-
-
-
-// custom select variables
+/* =========================
+   FILTER SYSTEM (PROJECTS)
+========================= */
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
 const selectValue = document.querySelector("[data-selecct-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
-
-select.addEventListener("click", function () { elementToggleFunc(this); });
-
-// add event in all select items
-for (let i = 0; i < selectItems.length; i++) {
-  selectItems[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    elementToggleFunc(select);
-    filterFunc(selectedValue);
-
-  });
-}
-
-// filter variables
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
-const filterFunc = function (selectedValue) {
+select.addEventListener("click", () => {
+  elementToggleFunc(select);
+});
 
-  for (let i = 0; i < filterItems.length; i++) {
+const filterFunc = (value) => {
+  filterItems.forEach(item => {
+    const category = item.dataset.category.toLowerCase();
 
-    if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category.toLowerCase()) {
-      filterItems[i].classList.add("active");
+    if (value === "all" || value === category) {
+      item.classList.add("active");
     } else {
-      filterItems[i].classList.remove("active");
+      item.classList.remove("active");
     }
-
-  }
-
-}
-
-// add event in all filter button items for large screen
-let lastClickedBtn = filterBtn[0];
-
-for (let i = 0; i < filterBtn.length; i++) {
-
-  filterBtn[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    filterFunc(selectedValue);
-
-    lastClickedBtn.classList.remove("active");
-    this.classList.add("active");
-    lastClickedBtn = this;
-
   });
+};
 
-}
+selectItems.forEach(item => {
+  item.addEventListener("click", function () {
+    const value = this.innerText.toLowerCase();
 
+    selectValue.innerText = this.innerText;
+    elementToggleFunc(select);
 
+    filterFunc(value);
+  });
+});
 
-// contact form variables
+let lastActiveBtn = filterBtn[0];
+
+filterBtn.forEach(btn => {
+  btn.addEventListener("click", function () {
+    const value = this.innerText.toLowerCase();
+
+    selectValue.innerText = this.innerText;
+    filterFunc(value);
+
+    lastActiveBtn.classList.remove("active");
+    this.classList.add("active");
+    lastActiveBtn = this;
+  });
+});
+
+/* =========================
+   CONTACT FORM VALIDATION
+========================= */
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
-
-    // check form validation
+formInputs.forEach(input => {
+  input.addEventListener("input", () => {
     if (form.checkValidity()) {
       formBtn.removeAttribute("disabled");
     } else {
       formBtn.setAttribute("disabled", "");
     }
-
   });
-}
+});
 
-
-
-// page navigation variables
+/* =========================
+   PAGE NAVIGATION
+========================= */
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
+navigationLinks.forEach(link => {
+  link.addEventListener("click", function () {
+    const target = this.innerHTML.toLowerCase();
 
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
+    pages.forEach((page, i) => {
+      if (page.dataset.page === target) {
+        page.classList.add("active");
         navigationLinks[i].classList.add("active");
         window.scrollTo(0, 0);
       } else {
-        pages[i].classList.remove("active");
+        page.classList.remove("active");
         navigationLinks[i].classList.remove("active");
       }
-    }
-
+    });
   });
-}
+});
 
-
-// Automatic slideshow for events
-document.querySelectorAll('[data-slideshow]').forEach(slideshow => {
-  const images = slideshow.querySelectorAll('img');
+/* =========================
+   SLIDESHOW (EVENTS + PROJECTS)
+========================= */
+document.querySelectorAll("[data-slideshow]").forEach(slideshow => {
+  const images = slideshow.querySelectorAll("img");
   let current = 0;
 
-  images[current].classList.add('active');
+  if (images.length === 0) return;
+
+  images.forEach(img => img.classList.remove("active"));
+  images[0].classList.add("active");
 
   setInterval(() => {
-    images[current].classList.remove('active');
+    images[current].classList.remove("active");
     current = (current + 1) % images.length;
-    images[current].classList.add('active');
-  }, 2500); // change every 2.5 seconds
+    images[current].classList.add("active");
+  }, 2500);
 });
 
+/* =========================
+   PROJECT MODAL (FIXED)
+========================= */
+const projectItems = document.querySelectorAll(".project-item");
+const modalContainer = document.querySelector("[data-project-modal-container]");
+const modalImg = document.querySelector("[data-project-modal-img]");
+const modalTitle = document.querySelector("[data-project-modal-title]");
+const modalDesc = document.querySelector("[data-project-modal-desc]");
+const modalClose = document.querySelector("[data-project-modal-close]");
+const overlay = document.querySelector("[data-project-overlay]");
 
-// PROJECT MODAL FUNCTIONALITY
-const projectItems = document.querySelectorAll('.project-item');
-const modalContainer = document.querySelector('[data-project-modal-container]');
-const modalImg = document.querySelector('[data-project-modal-img]');
-const modalTitle = document.querySelector('[data-project-modal-title]');
-const modalDesc = document.querySelector('[data-project-modal-desc]');
-const modalClose = document.querySelector('[data-project-modal-close]');
-const overlay = document.querySelector('[data-project-overlay]');
+const openProjectModal = (item) => {
+  const img = item.querySelector("img");
+  const title = item.querySelector(".project-title");
+  const desc = item.querySelector(".project-category");
+
+  modalImg.src = img?.src || "";
+  modalTitle.textContent = title?.textContent || "";
+  modalDesc.textContent = desc?.textContent || "";
+
+  modalContainer.classList.add("active");
+};
 
 projectItems.forEach(item => {
-  const eyeIcon = item.querySelector('.project-item-icon-box');
+  const eyeIcon = item.querySelector(".project-item-icon-box");
 
-  eyeIcon.addEventListener('click', e => {
+  if (!eyeIcon) return;
+
+  eyeIcon.addEventListener("click", (e) => {
     e.preventDefault();
-
-    const imgSrc = item.querySelector('img').getAttribute('src');
-    const title = item.querySelector('.project-title').textContent;
-    const desc = item.querySelector('.project-category').textContent;
-
-    modalImg.setAttribute('src', imgSrc);
-    modalTitle.textContent = title;
-    modalDesc.textContent = desc;
-
-    modalContainer.classList.add('active');
+    openProjectModal(item);
   });
 });
 
-[modalClose, overlay].forEach(el => {
-  el.addEventListener('click', () => {
-    modalContainer.classList.remove('active');
-  });
+/* CLOSE MODAL (FIXED & RELIABLE) */
+const closeProjectModal = () => {
+  modalContainer.classList.remove("active");
+};
+
+modalClose.addEventListener("click", closeProjectModal);
+overlay.addEventListener("click", closeProjectModal);
+
+/* EXTRA SAFETY: ESC key closes modal */
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeProjectModal();
+  }
 });
