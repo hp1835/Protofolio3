@@ -25,6 +25,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
+
 <body>
 
   <!--
@@ -313,7 +314,11 @@
                 </figure>
 
                 <h4 class="h4 testimonials-item-title" data-testimonials-title>Baithoon Saif (Manager)</h4>
-
+                 <p class="testimonials-email">
+                  <a href="mailto:saif.baithoon@scania.com">
+                 saif.baithoon@scania.com
+                  </a>
+                </p>
                 <div class="testimonials-text" data-testimonials-text>
                   <p>
                     Hetvi was hired at Scania AB as thesis worker to create a data visualization and prediction models. 
@@ -332,7 +337,15 @@
                   <img src="./assets/images/avatar-1.png" alt="Jessica miller" width="60" data-testimonials-avatar>
                 </figure>
 
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Älfvåg Hector (Supervisior)</h4>
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>
+                  Älfvåg Hector (Supervisor)
+                </h4>
+
+                <p class="testimonials-email">
+                  <a href="mailto:hector.alfvag@scania.com">
+                  hector.alfvag@scania.com
+                  </a>
+                </p>
 
                 <div class="testimonials-text" data-testimonials-text>
                   <p>
@@ -346,7 +359,29 @@
               </div>
             </li>
 
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
 
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/deepak.jpg" alt="Deepak Kamboj" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Deepak Kamboj (Mentor)</h4>
+                  <p class="testimonials-email">
+                  <a href="mailto:Deepak.Kamboj@ellevio.se">
+                  Deepak.Kamboj@ellevio.se
+                  </a>
+                </p>           
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Hetvi was my mentee during the Energy Buddies Mentoring Program at Energiföretagen Sverige. Throughout our mentorship, Hetvi consistently demonstrated a strong commitment to learning and professional growth. She actively engaged in our discussions, asking insightful questions and showing a genuine interest in understanding the energy industry. Hetvi's dedication to her development and her proactive approach to seeking guidance made her a pleasure to mentor, and I have no doubt that she will continue to excel in her career.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            
           </ul>
 
         </section>
@@ -399,33 +434,7 @@
           - clients
         -->
 
-        <section class="clients">
-
-          <h3 class="h3 clients-title">Hobby/Skills</h3>
-
-          <ul class="clients-list has-scrollbar">
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/book-open-reader-solid-full (1).svg" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/paintbrush-solid-full (1).svg" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/plane-solid-full (1).svg" alt="client logo">
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
+       
 
       </article>
 
@@ -750,8 +759,32 @@
 
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="Software Development">
+             <li class="project-item  active" data-filter-item data-category="Software Development">
               <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Project18.png" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Boot camp</h3>
+
+                <p class="project-category">Dashbord for Data analysis, sales prediction and visualization.
+                
+                      Creating interactive dashboards using Tableau
+                      Performing Exploratory Data Analysis (EDA) using Python
+                      Building a machine learning model to predict sales trends
+                      Deriving meaningful insights to support business decisions
+                </p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Software Development">
+              <a href="https://github.com/hp1835/fly">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -786,128 +819,121 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="Figma Design">
-              <a href="#">
+           <li class="project-item active" data-filter-item data-category="Figma Design">
+              <a href="https://www.figma.com/design/Vhj2MgNoWwx71fNLi3iPn1/Chamberly-Design?node-id=0-1&p=f&t=exrvv2s3qoCbjWq1-0">
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
+              <div class="project-slideshow" data-slideshow>
+                <img src="./assets/images/Project 9(1).PNG" class="active">
+                <img src="./assets/images/Project 9(2).PNG">
+                <img src="./assets/images/Project 9.PNG">
+              </div>
 
-                  <img src="./assets/images/Project 9.PNG" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Chamberly App</h3>
-
-                <p class="project-category">Figma Design of Mobile App</p>
+              <h3 class="project-title">Chamberly App</h3>
+              <p class="project-category">Figma Design of Mobile App</p>
 
               </a>
-            </li>
+           </li>
 
-            <li class="project-item  active" data-filter-item data-category="Data Mining">
-              <a href="#">
+            <li class="project-item active" data-filter-item data-category="Data Mining">
+              <a href="https://github.com/hp1835/news/blob/main/main.ipynb">
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
+                <div class="project-slideshow" data-slideshow>
+                  <img src="./assets/images/Project 3.avif" class="active">
+                  
+                </div>
 
-                  <img src="./assets/images/Project 3.avif" alt="brawlhalla" loading="lazy">
-                </figure>
+                <h3 class="project-title">News Verify</h3>
 
-                <h3 class="project-title">News verify</h3>
-
-                <p class="project-category">Prediction Model to predict article or news is Facke or Real</p>
+                <p class="project-category">
+                 Prediction model to classify news as fake or real
+                </p>
 
               </a>
-            </li>
+           </li>
+           <li class="project-item active" data-filter-item data-category="Figma Design">
+              <a href="https://www.figma.com/design/e813XUB7eWCSBJSzu4AyoY/Outbreak-alert?node-id=5-3&p=f&t=huwN6V2VYRZ2RGpe-0">
 
-            <li class="project-item  active" data-filter-item data-category="Figma Design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/Project 4.PNG" alt="dsm." loading="lazy">
-                </figure>
+                <div class="project-slideshow" data-slideshow>
+                  <img src="./assets/images/Project 4.PNG" class="active">
+                  <img src="./assets/images/Project 4(1).PNG" class="active">
+                  <img src="./assets/images/Project 4(2).PNG" class="active">
+      
+                </div>
 
                 <h3 class="project-title">Outbreak Alert Web Design</h3>
 
-                <p class="project-category">Website UI for Outbreak Alert for Ethiopia Region</p>
+                <p class="project-category">
+                 Website UI for Outbreak Alert for Ethiopia region
+                </p>
 
               </a>
-            </li>
+           </li>
 
-            <li class="project-item  active" data-filter-item data-category="Figma Design">
-              <a href="#">
+           <li class="project-item active" data-filter-item data-category="Figma Design">
+              <a href="https://www.figma.com/design/6L9GxtxcGiAfzOW10Bn49O/WorkBuddy_edited?node-id=0-1&p=f&t=YhubszpGk1Rmpn82-0">
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
+                <div class="project-slideshow" data-slideshow>
+                  <img src="./assets/images/Project 1.PNG" class="active">
+                  <img src="./assets/images/Project 1(1).PNG">
+                  <img src="./assets/images/Project 1(2).PNG">
+               </div>
 
-                  <img src="./assets/images/Project 1.PNG" alt="metaspark" loading="lazy">
-                </figure>
+               <h3 class="project-title">Workbuddy Mobile App UI</h3>
 
-                <h3 class="project-title">Workbuddy Mobile App UI</h3>
-
-                <p class="project-category">Figma Design of the app Workbuddy, Scania Hackthon</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="Software Development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Outbreak Alert Andriod App</h3>
-
-                <p class="project-category">Solution for Ethiopia region medical staff and people</p>
+               <p class="project-category">
+                  Figma design of the app Workbuddy, Scania Hackathon
+               </p>
 
               </a>
-            </li>
+           </li>
 
-            <li class="project-item  active" data-filter-item data-category="Data Mining">
+           <li class="project-item active" data-filter-item data-category="Software Development">
               <a href="#">
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
+                <div class="project-slideshow" data-slideshow>
+                  <img src="./assets/images/project-8.jpg" class="active">
+    
+                </div>
 
-                  <img src="./assets/images/Project 5.jpg" alt="task manager" loading="lazy">
-                </figure>
+                 <h3 class="project-title">Outbreak Alert Android App</h3>
 
-                <h3 class="project-title">Scania Parts RUL Prediction Model</h3>
+                <p class="project-category">
+                   Solution for Ethiopia region medical staff and people
+                </p>
 
-                <p class="project-category">Thesis Project to predict parts useful life</p>
+               </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="Data Mining">
+              <a href="#">
+
+                <div class="project-slideshow" data-slideshow>
+                   <img src="./assets/images/Project 5.jpg" class="active">
+      
+                </div>
+
+                 <h3 class="project-title">Scania Parts RUL Prediction Model</h3>
+
+                 <p class="project-category">
+                     Thesis project to predict parts useful life
+                  </p>
 
               </a>
-            </li>
+           </li>
 
-           <li class="project-item  active" data-filter-item data-category="Figma Design">
+           <li class="project-item active" data-filter-item data-category="Figma Design">
               <a href="#">
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
+                <div class="project-slideshow" data-slideshow>
+                   <img src="./assets/images/Project 2.PNG" class="active">
+      
+                 </div>
 
-                  <img src="./assets/images/Project 2.PNG" alt="metaspark" loading="lazy">
-                </figure>
+                 <h3 class="project-title">Thesis Project UI</h3>
 
-                <h3 class="project-title">Thesis Project UI</h3>
-
-                <p class="project-category">Website or Dashbord to visualize data and generate graphs</p>
+                <p class="project-category">
+                Website or dashboard to visualize data and generate graphs
+                </p>
 
               </a>
             </li>
